@@ -1,2 +1,4 @@
-llama-index
-openai easyocr streamlit
+llama-index 
+llama-index-llms-ollama 
+easyocr 
+streamlit 
