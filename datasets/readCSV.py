@@ -1,6 +1,11 @@
 import pandas as pd
 
-# Try common delimiters like ',', ';', '\t', '|'
-with open('GAZETTEammendments.csv', 'r', encoding='utf-8') as f:
-    sample = f.read(1024)
-    print(repr(sample))  # print raw characters to look for weird symbols
+# Try reading CSV with utf-8
+try:
+    df = pd.read_csv('Food_Additives_Regulations.camelot.csv', encoding='utf-8')
+except UnicodeDecodeError:
+    # If utf-8 fails, try ISO-8859-1 (Latin-1)
+    df = pd.read_csv('Food_Additives_Regulations.camelot.csv', encoding='ISO-8859-1')
+
+# Print the first 5 rows
+print(df.head())

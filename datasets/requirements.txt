@@ -2,3 +2,5 @@ pandas
 pdfminer.six 
 pymupdf
 pdfplumber
+camelot-py[cv]
+chardet
